@@ -1,35 +1,3 @@
-# BrainWebs
-Neural nets for developers (for when you need one, but don't care about how it works)
-
-## DISCLAIMER!!!
-
-Look, you should probably *actually* learn some of this stuff. This is just a
-temporary patch in your knowledge, so that you'll know some of the basics to get
-by when you need to do some machine learning for a project, but don't expect to
-really get great results or do anything really interesting until you understand
-the theory behind how things work.
-
-## Ok, here's the fun part
-
-Neural networks have become kind of trendy recently, and Google gave us a nice
-library called Tensorflow for working with them. Well, Tensorflow is also kind
-of hard to get the grasp of, so then they made another abstracted layer on top
-of Tensorflow to make creating neural networks as easy as humanly possible, so
-that's how TFLearn happened. This is what we're going to be learning about
-today.
-
-We're going to build a classifier to determine how likely a semifinalist is to
-get into TJ, using data from the [FCAG](http://www.fcag.org) website.
-
-## A couple of notes
-
-Tensorflow is symbolic: this means nothing gets evaulated until you compile the
-chain of functions. This makes Tensorflow really efficient, because it can
-optimize stuff based on what you're trying to do.
-
-## Here's the code
-
-```python
 # Import all of the things we want
 
 import pandas as pd # pandas for reading in data
@@ -80,4 +48,4 @@ model = tflearn.DNN(net)
 model.fit(trX, trY, n_epoch=50, batch_size=300, show_metric=True, validation_set=.2)
 
 model.predict([[0, 1, 1, 4, 47, 42]])
-```
+
